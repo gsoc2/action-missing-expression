@@ -1,19 +1,23 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
-
-# Define your inputs here.
+name: 'GitHub Actions base missing expression for Conditional value'
+description: 'GitHub Actions base missing expression for Conditional value'
+author: 'gsoc2'
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  cond:
+    description: 'condition. [true,false]'
     required: true
-    default: '1000'
-
-# Define your outputs here.
+  if_true:
+    description: 'output value if cond is true'
+    default: ''
+  if_false:
+    description: 'output value if cond is false'
+    default: ''
 outputs:
-  time:
-    description: 'Your output description here'
-
+  value:
+    description: 'output value'
 runs:
-  using: node20
-  main: dist/index.js
+  using: 'node16'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'help-circle'
+  color: 'white'
